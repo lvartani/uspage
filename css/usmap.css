@@ -1,6 +1,11 @@
+
 * {
-  box-sizing: border-box;
-}
+    margin: 0;
+    box-sizing: border-box;
+            }
+html, body {
+        height: 100%;
+    }
 
 body {
   margin: 0;
@@ -9,17 +14,45 @@ body {
 
 }
 
-html, body {
-        height: 100%;
-    }
 header {
-    font-family: "Raleway", sans-serif;;
-    height: 300px;
-    padding-top: 50px;
-    background: #f07057;
+    font-family: "Arial"!important;
+  height: 300px;
+  padding-top: 50px;
+  background-color: #fff;
+  background-image: url("/images/urbanspace2.png") !important;
+  text-align: center;
 
 }
-.main-nav,.main {
+#box{
+    background: rgba(255,255,255,0.7);
+    padding:10px;
+
+}
+#iconheader{
+    box-shadow: 1px 1px 5px #888888;
+    height: 80px;
+    margin: auto;
+    /*border: 3px solid lightgrey;*/
+    background: white;
+    padding:10px;
+    float: left;
+}
+
+#title {
+    text-align: center;
+    padding-left: 0px;
+    padding-top:10px;
+    font-size: 40px;
+    min-width:600px;
+    letter-spacing:4px;
+    display: inline;
+    font-weight: bold;
+}
+#contact{
+
+}
+.main-nav,
+.main {
   position: relative;
 }
 .main-nav {
@@ -28,6 +61,7 @@ header {
   z-index: 150;
   margin-bottom: -80px;
   box-shadow: 0 2px 3px rgba(0,0,0,.4);
+  text-align: center;
 }
 header,.main-nav-scrolled {
   position: fixed;
@@ -37,43 +71,114 @@ header,.main-nav-scrolled {
 
 .main {
   background: #fff;
-  width:100%;
-  padding: 50px 50px 50px;
+  width:100% !important;
+  padding: 110px 50px 50px;
   background-image: url("/images/grey.png") !important;
 
 }
-
- #states {
-  fill: none;
-  stroke:black;
-  stroke-width: 1.5px;
-
+#content{
+    position:relative;
+    width:100%;
+    text-align: center;
 }
 
-#state-borders {
-  fill: none;
-  stroke: black;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  pointer-events: none;
-  stroke-width: 2px;
+.section_title{
+    font-family: Cabin Sketch;
+    margin: 1.5em 0 0;
+    /*background-color: #FA6D68;*/
+    text-align: center !important;
+    margin-top: 100px;
+     padding: 15px 32px;
+    /*color:white;*/
+    border: none;
+    text-decoration: none;
+    font-size: 55px;
+    display: inline-block;
+
+}
+.section_buttons{
+    text-align: center;
 }
 
-#counties {
-  fill: #FFFFFF;
-  stroke: #CCCCFF;
-  stroke-width: 0.1px;
+ #country_label{
+  position:relative;
+  top: 550px;
 
+  font-family: 'Raleway' !important;
+  font-size: 35px;
+  text-align: right;
+
+  z-index: 100;
+  }
+
+.globe{
+    /*position: absolute;*/
+    text-align: center;
+    display: inline;
+
+    }
+
+.water {
+  fill: aliceblue;
+  cursor:move;
 }
 
-#counties-borders {
-  fill: none;
+.land {
+  fill: #789f12;
   stroke: lightgrey;
-  stroke-width: 0.3px !important;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  pointer-events: none;
+  stroke-width: 1px;
 }
+
+.land:hover {
+  fill:#FFFF99;
+  stroke-width: 1.2px;
+}
+
+
+.country {
+  fill: #FFCC00;
+  stroke: #FFF;
+  stroke-width: 1px;
+}
+
+.country:hover {
+  fill:#FFFF99;
+  stroke-width: 1.2px;
+}
+
+.countryTooltip {
+  position: absolute;
+  display: none;
+  pointer-events: none;
+  background: #000;
+  padding: 5px;
+  text-align: left;
+  border: solid #ccc 1px;
+  color: #fff;
+  font-size: 14px;
+  font-family: sans-serif;
+  border-radius:10px;
+}
+
+
+
+
+circle {
+  fill: #FFFFFF;
+  opacity: 0.5;
+}
+
+.q0-9 { fill: #E8E8E8}
+.q1-9 { fill: #EDF3F3}
+.q2-9 { fill: #E0EAEA }
+.q3-9 { fill: #FFFFFF }
+.q4-9 { fill: #FFFF99 }
+.q5-9 { fill: #C8C8DA}
+.q6-9 { fill: #F8F8F8 }
+.q7-9 { fill: #FFCC00}
+.q8-9 { fill: #FFFF99}
+
+
 
 #panel {
 
@@ -83,73 +188,65 @@ z-index:2;
 
 }
 
-#map {
-
-/*position: absolute;*/
-/*float:right;*/
+title {
+color:blue;
 }
 
-#title{
-    padding-left: -10px;
-    padding-top:10px;
-    font-size: 30px;
-    min-width:600px;
-    letter-spacing:4px;
-    font-family: 'Raleway';
-    display: table-cell;
-    font-weight: bold;
-}
-#headericon{
-    z-index:-10;
-    float:left;
-    height:90px;
-    padding:10px;
+title.text {
+color:blue;
 }
 
 
 
+/*rect{
+fill: #EDF3F3;
+}
+rect:hover
+
+  {
+    fill: #FFCC00 !important;
+    cursor:pointer;
+
+  }*/
 
 /*#rects{
 
 position:absolute;
 top:0;
 width:350px;
-left:2px;
+left:-50px;
 padding-left:60px;
-padding-right:10px;
+padding-right:50px;
 padding-top: 90px;
 z-index:1;
 
+
 }
-rect:hover
 
-  {
-    fill: #3399FF !important;
-    cursor:pointer;
-
-  }*/
+*/
 
 text {
 cursor:pointer;
 }
 
-@media screen and (max-width: 900px) {
-    #map, .sonarmenu {
-        display: none !important;
-    }
-
-}
+/*circle{
+position:absolute:
+float:right;
+padding-left:400px;
+padding-top: 40px;
+padding-right:10px;
+}*/
 
 #div1 {
     font-family:Raleway;
-    font-size:20px;
-    color:grey;
+    font-size:25px;
+    color:orange;
     margin: 3px;
     width: 80px;
     display: none;
   }
 
-#div2 {
+ #div2 {
     font-family:Raleway;
     font-size:15px;
     color:steelblue;
@@ -159,64 +256,77 @@ cursor:pointer;
   }
 
 
+#showr{
+
+    cursor:pointer;
+
+}
+
+#hidr{
+
+    cursor:pointer;
+}
+.block{
+    display: inline-block;
+}
+
 ul.sonarmenu{ /* Inspired by http://tympanus.net/codrops/2013/08/06/creative-link-effects */
-	list-style: none;
-    /*position:absolute;*/
-    top:35px;
-    right:20px;
+    list-style: none;
+    text-align: center;
+    display: inline;
 }
 
 ul.sonarmenu li{
- display: inline;
+    display: inline;
 }
 
 ul.sonarmenu a{
-	position: relative;
-	display: inline-block;
-	color: black; /* font color */
-	text-decoration: none;
-	margin: 10px 20px;
-	text-transform: uppercase;
-	font-family: 'Raleway', sans-serif; /* font style (uses Google fonts) */
-	font-size: 16px; /* font size */
-	letter-spacing: 2px; /* letter spacing */
-	border-bottom: 2px solid transparent; /* Bottom border style */
+    position: relative;
+    display: inline-block;
+    color: black; /* font color */
+    text-decoration: none;
+    margin: 10px 20px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif; /* font style (uses Google fonts) */
+    font-size: 16px; /* font size */
+    letter-spacing: 2px; /* letter spacing */
+    border-bottom: 2px solid transparent; /* Bottom border style */
 }
 
 ul.sonarmenu a:hover, ul.sonarmenu a:focus{
-	outline: none;
-	border-bottom: 2px solid #eee; /* Bottom border style on hover */
+    outline: none;
+    border-bottom: 2px solid #eee; /* Bottom border style on hover */
 }
 
 ul.sonarmenu a::before, ul.sonarmenu a:after{ /* shared style for two circles */
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 70px; /* width of outer circle */
-	height: 70px; /* height of outer circle */
-	border: 12px double rgba(0,0,0,0.1); /* style and color of circles */
-	border-radius: 50%;
-	content: '';
-	opacity: 0;
-	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
-	-moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
-	transform: translateX(-50%) translateY(-50%) scale(0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px; /* width of outer circle */
+    height: 70px; /* height of outer circle */
+    border: 12px double rgba(0,0,0,0.1); /* style and color of circles */
+    border-radius: 50%;
+    content: '';
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+    transform: translateX(-50%) translateY(-50%) scale(0.2);
 }
 
 ul.sonarmenu a:after{ /* inner circle specific CSS */
-	width: 60px; /* width of inner circle */
-	height: 60px; /* width of inner circle */
-	border-width: 6px;
-	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
-	-moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
-	transform: translateX(-50%) translateY(-50%) scale(0.8);
+    width: 60px; /* width of inner circle */
+    height: 60px; /* width of inner circle */
+    border-width: 6px;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
 }
 
 ul.sonarmenu a:hover:before, ul.sonarmenu a:hover:after{
-	-webkit-animation: pulsate 1.2s infinite; /* animation name duration loop etc */
-	-moz-animation: pulsate 1.2s infinite;
-	-ms-animation: pulsate 1.2s infinite;
-	animation: pulsate 1.2s infinite;
+    -webkit-animation: pulsate 1.2s infinite; /* animation name duration loop etc */
+    -moz-animation: pulsate 1.2s infinite;
+    -ms-animation: pulsate 1.2s infinite;
+    animation: pulsate 1.2s infinite;
 }
 
 /* ### Keyframe animations ### */
@@ -224,106 +334,72 @@ ul.sonarmenu a:hover:before, ul.sonarmenu a:hover:after{
 @-webkit-keyframes pulsate{
 
   30%{
-	opacity: 1;
-	-webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
   }
 
-	100%{
-	opacity: 0.3;
-	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.5);
-	}
+    100%{
+    opacity: 0.3;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.5);
+    }
 
 }
 
 @-moz-keyframes pulsate{
 
   30%{
-	opacity: 1;
-	-moz-transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 1;
+    -moz-transform: translateX(-50%) translateY(-50%) scale(1);
   }
 
-	100%{
-	opacity: 0.3;
-	-moz-transform: translateX(-50%) translateY(-50%) scale(0.5);
-	}
+    100%{
+    opacity: 0.3;
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.5);
+    }
 
 }
 
 @-ms-keyframes pulsate{
 
   30%{
-	opacity: 1;
-	-ms-transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 1;
+    -ms-transform: translateX(-50%) translateY(-50%) scale(1);
   }
 
-	100%{
-	opacity: 0.3;
-	-ms-transform: translateX(-50%) translateY(-50%) scale(0.5);
-	}
+    100%{
+    opacity: 0.3;
+    -ms-transform: translateX(-50%) translateY(-50%) scale(0.5);
+    }
 
 }
 
 @-keyframes pulsate{
 
   30%{
-	opacity: 1;
-	transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
   }
 
-	100%{
-	opacity: 0.3;
-	transform: translateX(-50%) translateY(-50%) scale(0.5);
-	}
+    100%{
+    opacity: 0.3;
+    transform: translateX(-50%) translateY(-50%) scale(0.5);
+    }
 
 }
-
-
 
 .ui-dialog {
-background: white !important;
-border: 2px solid steelblue !important;
-border-radius: 15px !important;
-
-
+    background: white !important;
+    border: 1px solid black !important;
+    border-radius: 10px !important;
 
 }
 
-.ui-dialog-titlebar { background: #fff !important;
-border: 0px solid black !important}
-
-
-
-/*#loader{
-position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url('http://loosine.com/ancestry/testloader.GIF') 50% 50% no-repeat rgb(249,249,249);
-
-}*/
-/*#footer {
-  height: 80px !important;
-  background-color: #F6F6F5 !important;
-  position:absolute;
-  bottom:0px;
-  width:100%;
-  font-family:Raleway;
-}*/
-
-.ui-dialog {
-background: white !important;
-border: 1px solid black !important;
-border-radius: 10px !important;
-
-
+.ui-dialog-titlebar {
+    background: none !important;
+    border: 0px solid black !important;
+    font: Raleway;
 
 }
-
-.ui-dialog-titlebar { background: none !important;
-border: 0px solid black !important;
-font: Raleway;}
 
 .ui-dialog-title{
     font-size: 150% !important;
@@ -332,42 +408,41 @@ font: Raleway;}
     font-family: Raleway;
 }
 
-::-webkit-scrollbar {
-    width: 12px;
-}
 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-}
-
-.side{
-float:right; padding-right:20px; background-color:#E6FFFF;
-padding:10px;   padding-right:20px; border-radius: 25px;
-font-size:small;
-width:200px;
-}
-
-.built, .photo, h2.datasource, .more{
-font-family:Raleway;
-font-size:15px;
-
+@media screen and (max-width: 50%) {
+    .globe,#globewater, {
+        display: none !important;
+    }
 
 }
 
-.ui-front {
-    z-index:100 !important; /* The default is 100. !important overrides the default. */
+@media screen and (max-width: 1000px) {
+    .sonarmenu,  {
+        display: none !important;
+    }
+
 }
 
 
-.drop, .drop2, .data, .container{
-width:150px;
-display:none;
+/* Set the fixed height of the footer here */
+footer#footer {
+  height: 80px !important;
+  background-color: #F6F6F5 !important;
+  width:100%;
+  z-index:100000000000;
+  bottom:10px;
+  font-family:Raleway;
+}
+
+#footer2 {
+  height: 80px;
+  background-color: #F6F6F5 !important;
+  width:100%;
+  z-index:100000000000;
+  bottom:0;
+  left:0;
+  /*position absolute;*/
+  font-family:Raleway;
 }
 
 .icon img{ /* 2nd set of icons. Rotate them 60deg onmouseover and out */
@@ -385,10 +460,106 @@ transition: all 0.8s ease-in-out;
 -ms-transform: rotate(70deg);
 transform: rotate(70deg);
 }
+
+
+.icon4 img{ /* 2nd set of icons. Rotate them 60deg onmouseover and out */
+moz-transition: all 0.8s ease-in-out;
+-webkit-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+-ms-transition: all 0.8s ease-in-out;
+transition: all 0.8s ease-in-out;
+}
+
+.icon4 img:hover{
+-moz-transform: rotate(70deg);
+-webkit-transform: rotate(70deg);
+-o-transform: rotate(70deg);
+-ms-transform: rotate(70deg);
+transform: rotate(70deg);
+}
+
+.dialogWithDropShadow
+     {
+         -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+         -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+     }
+.ui-front {
+    z-index:1000000 !important; /* The default is 100. !important overrides the default. */
+}
+.drop, .drop2, .container, .data, #moreinfo{
+display:none;
+}
+.side{
+float:right; padding-right:20px; background-color:#E6FFFF;padding:10px;   padding-right:20px; border-radius: 25px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+#more1:hover{
+color:steelblue;
+cursor:pointer;
+background-color:lightgrey;
+ border-radius: 5px;
+}
+
+
+
+
+.ui-widget-overlay.custom-overlay
+{
+    background-color: black;
+    background-image: none;
+    opacity: 0.8;
+    z-index: 1040;
+}
+
+
+#explore{
+font-family:Raleway;
+/*position:absolute;*/
+top:100px;
+right:21%
+
+}
+
+#countries152, #countries51, #countries268, #countries392, #countries840 {
+cursor:pointer;
+}
+
+.shadow {
+-webkit-filter: drop-shadow( -5px -5px 5px #000 ) !important;
+        filter: drop-shadow( -5px -5px 5px #000 )!important;
+}
+
+div.tooltip2{
+position:absolute;
+z-index: 10;
+top:510px;
+left: 37px;
+width: 200px;
+visibility:hidden;
+font-family: Raleway;
+font-weight: bold;
+font-size: small;
+}
+
 .buttons{
     width:700px;
     position:relative;
     float: left:
+    display:inline;
 }
 
 .view {
@@ -402,7 +573,7 @@ transform: rotate(70deg);
     text-align: center;
     box-shadow: 1px 1px 2px #e6e6e6;
     cursor: default;
-    background: #fff url(../images/bgimg.jpg) no-repeat center center
+    /*background: #fff url(../images/bgimg.jpg) no-repeat center center*/
 }
 .view .mask, .view .content {
     width: 300px;
@@ -469,17 +640,17 @@ transform: rotate(70deg);
 .view-first p {
     transform: translateY(100px);
     opacity: 0;
-	transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .view-first a.info{
     opacity: 0;
-	transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .view-first:hover img {
-	transform: scale(1.7);
+  transform: scale(1.7);
 }
 .view-first:hover .mask {
-	opacity: 1;
+  opacity: 1;
 }
 .view-first:hover h2,
 .view-first:hover p,
@@ -493,25 +664,132 @@ transform: rotate(70deg);
 .view-first:hover a.info {
     transition-delay: 0.2s;
 }
+#chile_scroll {
+    display: none;
+    position: relative;
+    text-align: center;
 
-.section_title{
-    font-family: Cabin Sketch;
-    margin: 1.5em 0 0;
-    /*background-color: #FA6D68;*/
-    text-align: center !important;
-    margin-top: 100px;
-     padding: 15px 32px;
-    /*color:white;*/
-    border: none;
-    text-decoration: none;
-    font-size: 55px;
+}
+#about_scroll{
+    text-align: center;
+    width: 800px;
+margin-left: auto;
+   margin-right: auto;
+
+
+}
+
+.block{
+    display: inline-block;
+}
+#aboutimg{
+    text-align: center;
+    height: 500px;
     display: inline-block;
 
 }
-.section_buttons{
-    text-align: center;
+.abouttext{
+     /*float: left;
+    display: inline-block;
+
+    margin-right: 8px;*/
+
 }
 
-#bis{
-    display:none;
+.next_buttons{
+    font-family: Raleway !important;
+    font-size: 24px;
 }
+
+
+ #states {
+  fill: none;
+  stroke:black;
+  stroke-width: 0.8px;
+
+}
+
+#state-borders {
+  fill: none;
+  stroke: black;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+  /*stroke-width: 1px;*/
+}
+
+#counties {
+  fill: #FFFFFF;
+  stroke: #CCCCFF;
+  stroke-width: 0.1px;
+
+}
+
+#counties-borders {
+  fill: none;
+  stroke: black;
+  stroke-width: 0.2px !important;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+#panel {
+
+width: 1000px;
+margin: auto;
+z-index:2;
+
+}
+
+
+#title{
+    text-align: center;
+    padding-left: 0px;
+    padding-top:10px;
+    font-size: 40px;
+    min-width:600px;
+    letter-spacing:4px;
+    display: inline;
+    font-weight: bold;
+}
+#headericon{
+    z-index:-10;
+    float:left;
+    height:90px;
+    padding:10px;
+}
+
+
+text {
+cursor:pointer;
+}
+
+@media screen and (max-width: 900px) {
+    #map, .sonarmenu {
+        display: none !important;
+    }
+}
+
+#bis, #luskin, #ny_upk{
+    display:none;
+    text-align:center;
+}
+#aboutimg{
+    text-align: center;
+    height: 500px;
+    display: inline-block;
+
+}
+
+.cities hover{
+    fill:black;
+}
+
+.back{
+    cursor: pointer;
+}
+
+.biSlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:20px;width:20px;padding:0}
