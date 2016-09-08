@@ -1,4 +1,9 @@
-
+@media screen and (max-width: 1125px) {
+   .block {
+       display: inline-block;
+       text-align: center;
+  }
+}
 * {
     margin: 0;
     box-sizing: border-box;
@@ -15,10 +20,10 @@ body {
 }
 
 header {
-    font-family: "Arial"!important;
+    font-family: "Raleway"!important;
   height: 300px;
   padding-top: 50px;
-  background-color: #fff;
+  background-color: none;
   background-image: url("/images/urbanspace2.png") !important;
   text-align: center;
 
@@ -28,6 +33,7 @@ header {
     padding:10px;
 
 }
+
 #iconheader{
     box-shadow: 1px 1px 5px #888888;
     height: 80px;
@@ -48,8 +54,43 @@ header {
     display: inline;
     font-weight: bold;
 }
-#contact{
+.arrow{
+    height:60px;
+    opacity: 0.7;
 
+
+}
+.next{
+
+    width:550px;
+    text-align: center;
+
+}
+
+.next_buttons{
+    font-family: Cabin Sketch !important;
+    font-size: 34px;
+    float: right;
+    margin-top: 10px;
+
+}
+.back_up{
+    width:50%;
+    text-align: center;
+}
+.back{
+    height: 50px;
+    text-align: center;
+    opacity: 0.8;
+    float: right;
+    cursor: pointer;
+    content: url('/images/up-arrow.svg');
+}
+.back_text{
+    font-family: Cabin Sketch !important;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
 }
 .main-nav,
 .main {
@@ -70,9 +111,9 @@ header,.main-nav-scrolled {
 }
 
 .main {
-  background: #fff;
+  background: none;
   width:100% !important;
-  padding: 110px 50px 50px;
+  padding:1px 1px 1px;
   background-image: url("/images/grey.png") !important;
 
 }
@@ -93,7 +134,7 @@ header,.main-nav-scrolled {
     border: none;
     text-decoration: none;
     font-size: 55px;
-    display: inline-block;
+
 
 }
 .section_buttons{
@@ -266,9 +307,9 @@ padding-right:10px;
 
     cursor:pointer;
 }
-.block{
+/*.block{
     display: inline-block;
-}
+}*/
 
 ul.sonarmenu{ /* Inspired by http://tympanus.net/codrops/2013/08/06/creative-link-effects */
     list-style: none;
@@ -556,14 +597,15 @@ font-size: small;
 }
 
 .buttons{
-    width:700px;
+    width:600px;
     position:relative;
     float: left:
     display:inline;
+
 }
 
 .view {
-    width: 300px;
+    width: 275px;
     height: 200px;
     margin: 10px;
     float: left;
@@ -576,7 +618,7 @@ font-size: small;
     /*background: #fff url(../images/bgimg.jpg) no-repeat center center*/
 }
 .view .mask, .view .content {
-    width: 300px;
+    width: 275px;
     height: 200px;
     position: absolute;
     overflow: hidden;
@@ -604,10 +646,10 @@ font-size: small;
 }
 .view p {
     font-family: Georgia, serif;
-    font-style: italic;
+    font-style: normal;
     font-size: 12px;
     position: relative;
-    color: #fff;
+    color: #000;
     padding: 10px 20px 20px;
     text-align: center
 }
@@ -629,7 +671,7 @@ font-size: small;
 }
 .view-first .mask {
     opacity: 0;
-    background-color: rgba(5,5,5, 0.7);
+    background-color: rgba(240,248,255, 0.7);
     transition: all 0.4s ease-in-out;
 }
 .view-first h2 {
@@ -679,9 +721,7 @@ margin-left: auto;
 
 }
 
-.block{
-    display: inline-block;
-}
+
 #aboutimg{
     text-align: center;
     height: 500px;
@@ -694,11 +734,6 @@ margin-left: auto;
 
     margin-right: 8px;*/
 
-}
-
-.next_buttons{
-    font-family: Raleway !important;
-    font-size: 24px;
 }
 
 
@@ -765,11 +800,13 @@ text {
 cursor:pointer;
 }
 
-@media screen and (max-width: 900px) {
+/*@media screen and (max-width: 900px) {
     #map, .sonarmenu {
         display: none !important;
     }
-}
+}*/
+
+
 
 #bis, #luskin, #ny_upk{
     display:none;
@@ -789,7 +826,12 @@ cursor:pointer;
 .back{
     cursor: pointer;
 }
+.center{
+    text-align: center;
+    width:100%;
+
+}
 
 .biSlides {display:none}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:20px;width:20px;padding:0}
+.w3-badge {height:10px;width:10px;padding:0px!important}

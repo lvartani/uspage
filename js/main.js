@@ -10,7 +10,23 @@ $(window).scroll(function() {
   }
 });
 
+$(document).on('click','.searchbychar', function(event) {
+    event.preventDefault();
+    var target = "#" + this.getAttribute('data-target');
+    $(target).show();
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 1500);
+});
 
+
+$(document).on('click','.searchbychar_fast', function(event) {
+    event.preventDefault();
+    var target = "#" + this.getAttribute('data-target');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 1500);
+});
 
 
 var slideIndex = 1;
@@ -79,6 +95,8 @@ var path = d3.geo.path()
 var svg = d3.select(".map").append("svg")
     .attr("width", width)
     .attr("height", height)
+    // .attr("viewBox", "0 0 600 560")
+    // .attr("preserveAspectRatio", "xMinYMin meet")
     .attr("id", "map")
     .attr("class", "block");
 
@@ -190,17 +208,18 @@ d3.json("us.json", function(error, us) {
             d3.select("h4#city_name").text("");
         });
     }
+    //
+    // var map = $("#map"),
+    // aspect = map.width() / map.height(),
+    // container = map.parent();
+    // $(window).on("resize", function() {
+    //     var targetWidth = container.width();
+    //     map.attr("width", targetWidth);
+    //     map.attr("height", Math.round(targetWidth / aspect));
+    // }).trigger("resize");
 
 
 
-    $(document).on('click','.searchbychar', function(event) {
-        event.preventDefault();
-        var target = "#" + this.getAttribute('data-target');
-        $(target).show();
-        $('html, body').animate({
-            scrollTop: $(target).offset().top
-        }, 1500);
-    });
 
 
 
