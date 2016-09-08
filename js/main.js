@@ -97,7 +97,7 @@ var svg = d3.select(".map").append("svg")
     .attr("height", height)
     // .attr("viewBox", "0 0 600 560")
     // .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("id", "map")
+    .attr("class", "globe")
     .attr("class", "block");
 
 
@@ -159,13 +159,17 @@ d3.json("us.json", function(error, us) {
            .style("opacity", 0.75)
            .on("mouseover", function (d) {
 
-                d3.select("h4#city_name").text(d.place);
+                d3.select(".city_name")
+                .text(d.place)
+                .style("left", (d3.event.pageX)+ "px")
+                .style("top", (d3.event.pageY-230)+ "px");
                 d3.select(this).style("fill","black");
                   console.log(d);
+
             })
             .on("mouseout", function(d){
                 d3.select(this).attr("class","cities");
-                d3.select("h4#city_name").text("");
+                d3.select(".city_name").text("");
                 d3.select(this).style("fill","yellow");
 
             })
@@ -196,16 +200,16 @@ d3.json("us.json", function(error, us) {
 
         d3.select("."+ button).on("click", function(d){
             d3.select(city).style("fill", "black");
-            d3.select("h4#city_name").text(name);
+            // d3.select(".city_name").text(name);
 
         });
         d3.select("."+ button).on("mouseover", function(d){
             d3.select(city).style("fill", "black");
-            d3.select("h4#city_name").text(name);
+            // d3.select(".city_name").text(name);
         });
         d3.select("."+ button).on("mouseout", function(d){
             d3.select(city).style("fill", "yellow");
-            d3.select("h4#city_name").text("");
+            d3.select(".city_name").text("");
         });
     }
     //

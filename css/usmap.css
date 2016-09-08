@@ -117,6 +117,10 @@ header,.main-nav-scrolled {
   background-image: url("/images/grey.png") !important;
 
 }
+
+svg#map{
+    position:relative;
+}
 #content{
     position:relative;
     width:100%;
@@ -229,13 +233,6 @@ z-index:2;
 
 }
 
-title {
-color:blue;
-}
-
-title.text {
-color:blue;
-}
 
 
 
@@ -821,6 +818,10 @@ cursor:pointer;
 
 .cities hover{
     fill:black;
+}
+
+.city_name{
+    position:absolute;
 }
 
 .back{
