@@ -84,7 +84,8 @@ header {
     opacity: 0.8;
     float: right;
     cursor: pointer;
-    content: url('/images/up-arrow.svg');
+    content: url('/images/curved-arrow.svg');
+    margin-right: 5px;
 }
 .back_text{
     font-family: Cabin Sketch !important;
@@ -807,7 +808,7 @@ cursor:pointer;
 
 #bis, #luskin, #ny_upk{
     display:none;
-    text-align:center;
+    /*text-align:center;*/
 }
 #aboutimg{
     text-align: center;
@@ -830,6 +831,25 @@ cursor:pointer;
 .center{
     text-align: center;
     width:100%;
+
+}
+.content_center{
+    /*text-align: center;*/
+    margin-right: 10px
+    margin-left:10px;
+    display: inline;
+
+
+}
+.summary{
+    width:700px;
+    margin:auto;
+    font-family: 'Coming Soon', 'Raleway';
+    position:relative;
+}
+.header{
+    font-weight: bold;
+    font-family: Raleway;
 
 }
 

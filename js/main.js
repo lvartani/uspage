@@ -179,14 +179,14 @@ d3.json("us.json", function(error, us) {
             select_city("bis",city4, "Boston");
             select_city("water",city2, "Los Angeles");
             select_city("ny",city1, "New York");
-            select_city("ipad",city5, "Cupertino");
+            select_city("chicago",city3, "Chicago");
             select_city("bcrime",city4, "Boston");
 
             d3.select(".ancestry").on("click", function(d){
-                d3.select("#states").style("fill", "gold");
+                d3.select("#states").style("fill", "aliceblue");
             });
             d3.select(".ancestry").on("mouseover", function(d){
-                d3.select("#states").style("fill", "gold");
+                d3.select("#states").style("fill", "aliceblue");
             });
             d3.select(".ancestry").on("mouseout", function(d){
                 d3.select("#states").style("fill", "none");
@@ -227,75 +227,88 @@ d3.json("us.json", function(error, us) {
 
 
 
+//
+//      $(function() {
+//         $( "#aboutme" ).dialog({
+//         	dialogClass: 'dialogWithDropShadow',
+//           autoOpen: false,
+//
+//           show: {
+//             effect: "",
+//
+//             duration: 500
+//           },
+//           hide: {
+//             effect: "",
+//             duration: 500
+//           },
+//           width: 800,
+//           height: 500,
+//           draggable: true,
+//
+//
+//           resizable: true
+//         	});
+//
+//         $( "#opener" ).click(function() {
+//           $( "#aboutme" ).dialog( "open" );
+//         });
+//          });
+//
+//     $(function() {
+//         $( ".dialog" ).dialog({
+//           autoOpen: false,
+//
+//           show: {
+//             effect: "slide",
+//
+//             duration: 500
+//           },
+//           hide: {
+//             effect: "slide",
+//             duration: 1000
+//           },
+//           width: 900,
+//           height: 500,
+//           draggable: true,
+//
+//
+//           resizable: true
+//         	});
+//
+//         $( "#opener" ).click(function() {
+//           $( "#aboutme" ).dialog( "open" );
+//         });
+//          });
+//
+//
+//        $(function() {
+//         $( "#mymodal9" ).draggable();
+//       });
+//
+//
+//   $(document).ready(function () {
+//       $( ".icon3").click(function() {
+//       $( ".drop" ).toggle( "slow" );
+//
+//     });
+//
+//
+// });
 
-     $(function() {
-        $( "#aboutme" ).dialog({
-        	dialogClass: 'dialogWithDropShadow',
-          autoOpen: false,
+$(document).ready(function () {
 
-          show: {
-            effect: "",
-
-            duration: 500
-          },
-          hide: {
-            effect: "",
-            duration: 500
-          },
-          width: 800,
-          height: 500,
-          draggable: true,
-
-
-          resizable: true
-        	});
-
-        $( "#opener" ).click(function() {
-          $( "#aboutme" ).dialog( "open" );
+        $( ".icon2").click(function() {
+          $( ".drop2" ).toggle( "slow" );
         });
-         });
-
-    $(function() {
-        $( ".dialog" ).dialog({
-          autoOpen: false,
-
-          show: {
-            effect: "slide",
-
-            duration: 500
-          },
-          hide: {
-            effect: "slide",
-            duration: 1000
-          },
-          width: 900,
-          height: 500,
-          draggable: true,
-
-
-          resizable: true
-        	});
-
-        $( "#opener" ).click(function() {
-          $( "#aboutme" ).dialog( "open" );
+        $( ".built").click(function() {
+          $( ".drop" ).toggle( "slow" );
         });
-         });
-
-
-       $(function() {
-        $( "#mymodal9" ).draggable();
-      });
-
-
-  $(document).ready(function () {
-      $( ".icon3").click(function() {
-      $( ".drop" ).toggle( "slow" );
-
-    });
-
+        $( ".more" ).click(function() {
+          $( ".drop2" ).toggle( "slow" );
+        });
 
 });
-
 
     function refreshIframe3() {
         var ifr = document.getElementsByName('architecturef')[0];
@@ -307,7 +320,37 @@ d3.json("us.json", function(error, us) {
         ifr.src = ifr.src;
     }
 
+    $(function() {
+		$( "#arcbook" ).dialog({
+			dialogClass: 'dialogWithDropShadow',
+			autoOpen: false,
+			modal:true,
+			show: {
+				effect:"",
+				duration: 500
+			},
+			hide: {
+				effect: "",
+				duration: 500
+			},
+			open: function(ev, ui){
+				 $("#arcf").attr('src',"http://loosine.com/test.html");
+				  $('.ui-widget-overlay').addClass('custom-overlay');
+			  },
 
+			close: function() {
+				$('.ui-widget-overlay').removeClass('custom-overlay');
+			},
+			width: 1250,
+			height: 600,
+			draggable: true,
+			resizable: true
+			});
+
+		$( "#arcopener" ).click(function() {
+				$( "#arcbook" ).dialog( "open" );
+				});
+		});
 
     $(function() {
            $( "#gisbook" ).dialog({
