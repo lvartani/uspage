@@ -205,7 +205,7 @@ d3.json("us.json", function(error, us) {
 
 
             d3.select(".ancestry").on("mouseover", function(d){
-                d3.select("#states").style("fill", "steelblue");
+                d3.select("#states").style("fill", "lightblue");
             });
             d3.select(".ancestry").on("mouseout", function(d){
                 d3.select("#states").style("fill", "none");
