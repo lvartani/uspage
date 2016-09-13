@@ -24,7 +24,7 @@ header {
   height: 300px;
   padding-top: 50px;
   background-color: none;
-  background-image: url("/images/urbanspace2.png") !important;
+  background-image: url("/images/urbanspace3.png") !important;
   text-align: center;
 
 }
@@ -35,7 +35,7 @@ header {
 }
 
 #iconheader{
-    box-shadow: 1px 1px 5px #888888;
+    /*box-shadow: 1px 1px 5px #888888;*/
     height: 80px;
     margin: auto;
     /*border: 3px solid lightgrey;*/
@@ -64,6 +64,7 @@ header {
 
     width:550px;
     text-align: center;
+    cursor: pointer;
 
 }
 

@@ -25,7 +25,11 @@ $(document).on('click','.searchbychar_fast', function(event) {
     var target = "#" + this.getAttribute('data-target');
     $('html, body').animate({
         scrollTop: $(target).offset().top
-    }, 1500);
+    }, 1000);
+});
+
+$(".next").click(function(){
+    window.open("http://localhost", "_self", true)
 });
 
 
@@ -49,8 +53,6 @@ function plusDivsB(n) {
 function currentDivB(n) {
   showDivs(slideIndex = n, "demoB","waterSlides", " w3-white");
 }
-
-
 
 showDivs(slideIndex, "demo","biSlides", " w3-black");
 
@@ -173,6 +175,23 @@ d3.json("us.json", function(error, us) {
                 d3.select(this).style("fill","yellow");
 
             })
+            .on("click", function(d){
+                if (d.rank == 4){
+                    scroll_city(bis);
+        			}
+                else if (d.rank==2) {
+                    scroll_city(luskin);
+                }
+                else if (d.rank==1) {
+                    scroll_city(ny_upk);
+                }
+                else if (d.rank==3) {
+                    window.open("#");
+                }
+                else{
+                    d3.select(this).style("fill","black");
+                }
+                })
             .attr("id", function(d) { return "city" + d.rank; });
 
 
@@ -182,11 +201,11 @@ d3.json("us.json", function(error, us) {
             select_city("chicago",city3, "Chicago");
             select_city("bcrime",city4, "Boston");
 
-            d3.select(".ancestry").on("click", function(d){
-                d3.select("#states").style("fill", "aliceblue");
-            });
+
+
+
             d3.select(".ancestry").on("mouseover", function(d){
-                d3.select("#states").style("fill", "aliceblue");
+                d3.select("#states").style("fill", "steelblue");
             });
             d3.select(".ancestry").on("mouseout", function(d){
                 d3.select("#states").style("fill", "none");
@@ -197,11 +216,9 @@ d3.json("us.json", function(error, us) {
 
 });
     function select_city(button, city,name){
-
         d3.select("."+ button).on("click", function(d){
             d3.select(city).style("fill", "black");
             // d3.select(".city_name").text(name);
-
         });
         d3.select("."+ button).on("mouseover", function(d){
             d3.select(city).style("fill", "black");
@@ -212,6 +229,15 @@ d3.json("us.json", function(error, us) {
             d3.select(".city_name").text("");
         });
     }
+
+
+    function scroll_city(scroll){
+        $(scroll).show();
+        $('html, body').animate({
+               scrollTop: $(scroll).offset().top
+           }, 1000);
+    }
+
     //
     // var map = $("#map"),
     // aspect = map.width() / map.height(),
@@ -223,78 +249,8 @@ d3.json("us.json", function(error, us) {
     // }).trigger("resize");
 
 
-
-
-
-
-//
-//      $(function() {
-//         $( "#aboutme" ).dialog({
-//         	dialogClass: 'dialogWithDropShadow',
-//           autoOpen: false,
-//
-//           show: {
-//             effect: "",
-//
-//             duration: 500
-//           },
-//           hide: {
-//             effect: "",
-//             duration: 500
-//           },
-//           width: 800,
-//           height: 500,
-//           draggable: true,
 //
 //
-//           resizable: true
-//         	});
-//
-//         $( "#opener" ).click(function() {
-//           $( "#aboutme" ).dialog( "open" );
-//         });
-//          });
-//
-//     $(function() {
-//         $( ".dialog" ).dialog({
-//           autoOpen: false,
-//
-//           show: {
-//             effect: "slide",
-//
-//             duration: 500
-//           },
-//           hide: {
-//             effect: "slide",
-//             duration: 1000
-//           },
-//           width: 900,
-//           height: 500,
-//           draggable: true,
-//
-//
-//           resizable: true
-//         	});
-//
-//         $( "#opener" ).click(function() {
-//           $( "#aboutme" ).dialog( "open" );
-//         });
-//          });
-//
-//
-//        $(function() {
-//         $( "#mymodal9" ).draggable();
-//       });
-//
-//
-//   $(document).ready(function () {
-//       $( ".icon3").click(function() {
-//       $( ".drop" ).toggle( "slow" );
-//
-//     });
-//
-//
-// });
 
 $(document).ready(function () {
 
